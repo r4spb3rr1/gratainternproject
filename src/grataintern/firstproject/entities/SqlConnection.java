@@ -22,7 +22,7 @@ public class SqlConnection {
             {
                 String userinfo = u.getInfo();
                 String strr = String.format("INSERT INTO test.\"User\" (username, userpassword, firstname, lastname, birthdate) VALUES %s", userinfo);
-                //System.out.println(userinfo);
+                System.out.println(userinfo);
                 //System.out.println(strr);
                 //stmt.executeUpdate(str);
             }
