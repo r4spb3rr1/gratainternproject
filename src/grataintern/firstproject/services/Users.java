@@ -18,4 +18,9 @@ public class Users
         }
         return null;
     }
+    public ArrayList<User> getUsers()
+    {
+        return users;
+    }
+
 }

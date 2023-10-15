@@ -58,7 +58,7 @@ public class User
     }
     public String getInfo()
     {
-        return String.format("('%s', '%s', '%s', '%s', '%s')", username, password, firstname, lastname, birth_date);
+        return String.format("('%s', '%s', '%s', '%s', %s)", username, password, firstname, lastname, birth_date);
     }
 
 

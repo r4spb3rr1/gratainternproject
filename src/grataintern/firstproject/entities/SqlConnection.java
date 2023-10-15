@@ -7,8 +7,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.SQLException;
 
+
 public class SqlConnection {
-    public void convertListToTable(Users all_users)
+    public void convertCSVToSQL(String dir)
     {
         try
         {
@@ -18,14 +19,10 @@ public class SqlConnection {
             String password = "1111";
             Connection con = DriverManager.getConnection(url, login, password);
             Statement stmt = con.createStatement();
-            for(User u : all_users.users)
-            {
-                String userinfo = u.getInfo();
-                String strr = String.format("INSERT INTO test.\"User\" (username, userpassword, firstname, lastname, birthdate) VALUES %s", userinfo);
-                System.out.println(userinfo);
-                //System.out.println(strr);
-                //stmt.executeUpdate(str);
-            }
+
+
+            String INSERT_PERSON_QUERY = "INSERT INTO test.\"User\" (Username, UserPassword, FirstName, LastName, BirthDate) VALUES (?, ?, ?, ?, ?)";
+
             stmt.close();
             con.close();
         }

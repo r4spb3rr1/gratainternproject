@@ -4,9 +4,8 @@ import grataintern.firstproject.services.*;
 public class Main {
     public static void main(String[] args) throws Exception{
 
-        //UserService run = new UserService();
-        //run.Run();
-
+        UserService run = new UserService();
+        run.Run();
         //User user = new User("magzhan", "1111", "Magzhan", "Kadyrov", "2004-02-13");
         //String userinfo = user.getInfo();
         //System.out.println(userinfo);

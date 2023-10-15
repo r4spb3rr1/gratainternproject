@@ -61,6 +61,8 @@ public class UserService
             System.out.println("Укажите путь к файлу:");
             String dir = in.nextLine();
             all_users = parser.parse(dir);
+            SqlConnection connection = new SqlConnection();
+            connection.convertCSVToSQL(dir);
             if(all_users != null)
             {
                 while(true)

@@ -60,8 +60,6 @@ public class CSVParser
                     buff = "";
                 }
             }
-            SqlConnection sqlConnect = new SqlConnection();
-            sqlConnect.convertListToTable(all_users);
             System.out.println("Данные успешно загружены.");
             return all_users;
             /*for (User temp_user : all_users.users) {
